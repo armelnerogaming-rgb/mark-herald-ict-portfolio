@@ -1,0 +1,7 @@
+/assets/ict-awareness-video.mp4
+  Content-Type: video/mp4
+  Accept-Ranges: bytes
+  Cache-Control: public, max-age=3600
+
+/*.pptx
+  Content-Type: application/vnd.openxmlformats-officedocument.presentationml.presentation

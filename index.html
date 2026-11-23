@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My ICT Portfolio | Empowerment Technologies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F8FB;--surface:#FFFFFF;--ink:#1B2A41;--muted:#51607a;--teal:#0F8B8D;--coral:#D9455B;--sun:#F2C14E;--line:#D5DCE8;--on-teal:#fff;
+--head:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--body:'Source Serif 4',Georgia,serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1624;--surface:#17233A;--ink:#EAF0FA;--muted:#A9B6CC;--teal:#3CC4C6;--coral:#FF7A8C;--line:#2B3A57;--on-teal:#0E1624;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1624;--surface:#17233A;--ink:#EAF0FA;--muted:#A9B6CC;--teal:#3CC4C6;--coral:#FF7A8C;--line:#2B3A57;--on-teal:#0E1624;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.7}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0 0 .5em}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.hero{padding:72px 0 40px;border-bottom:6px solid var(--teal)}
+.hero h1{font-size:clamp(2.2rem,7vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:60ch;color:var(--muted)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:8px 20px;overflow-x:auto;max-width:960px;margin-inline:auto}
+nav a{font-family:var(--head);font-weight:700;font-size:.95rem;text-decoration:none;color:var(--ink);padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a:hover{background:var(--teal);color:var(--on-teal)}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(1.6rem,4vw,2.3rem)}
+.tag{font-family:var(--head);font-weight:700;color:var(--coral)}
+.essay p{max-width:68ch}
+.essay figure{margin:24px 0}
+.essay svg,.essay img{max-width:100%}
+figcaption,.note{color:var(--muted);font-size:.95rem}
+/* poster */
+.poster{background:#1B2A41;color:#fff;border-radius:18px;padding:28px;max-width:760px;margin:20px auto;border:4px solid var(--sun)}
+.poster h3{font-size:clamp(1.6rem,5vw,2.4rem);text-align:center;margin-bottom:18px;color:var(--sun)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.cols{grid-template-columns:1fr}}
+.do,.dont{border-radius:12px;padding:16px 18px}
+.do{background:#0F8B8D}.dont{background:#C93A50}
+.do h4,.dont h4{font-family:var(--head);font-size:1.4rem;margin:0 0 8px}
+.do ul,.dont ul{margin:0;padding-left:1.2em;font-family:var(--head);font-weight:500;font-size:1rem;line-height:1.5}
+.slogan{text-align:center;font-family:var(--head);font-weight:800;font-size:1.3rem;margin:20px 0 0;color:var(--sun)}
+/* infographic */
+.info{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;margin:20px 0}
+.info h3{text-align:center;font-size:clamp(1.4rem,4vw,2rem)}
+.stat{text-align:center;background:var(--teal);color:var(--on-teal);border-radius:12px;padding:14px;margin:0 auto 20px;max-width:420px}
+.stat b{display:block;font-family:var(--head);font-size:2.2rem}
+.uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
+.use{background:var(--bg);border-radius:12px;padding:14px;text-align:center;font-family:var(--head);font-weight:700;font-size:.98rem;border-bottom:4px solid var(--sun)}
+.use span{display:block;font-size:2rem}
+.ben{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.ben div{border:2px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.98rem;line-height:1.5}
+.ben h4{margin:0 0 4px;font-family:var(--head);color:var(--coral)}
+.concl{margin-top:20px;padding:14px 18px;border-left:6px solid var(--coral);background:var(--bg);font-style:italic}
+/* slides */
+.deck{background:#1B2A41;color:#fff;border-radius:18px;overflow:hidden;max-width:820px;margin:20px auto}
+.slide{display:none;min-height:340px;padding:32px;align-content:center}
+.slide.on{display:grid}
+.slide h3{font-size:clamp(1.5rem,4.5vw,2.3rem);color:var(--sun)}
+.slide p,.slide li{font-family:var(--head);font-weight:500;font-size:1.1rem;line-height:1.55}
+.slide>*{animation:rise .6s both}
+.slide>*:nth-child(2){animation-delay:.25s}.slide>*:nth-child(3){animation-delay:.5s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.ball{width:56px;height:56px;border-radius:50%;background:var(--coral);margin:10px 0;animation:roll 2.4s ease-in-out infinite alternate}
+@keyframes roll{from{transform:translateX(0)}to{transform:translateX(min(60vw,520px))}}
+.ctrl{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:#122036}
+.ctrl button{font-family:var(--head);font-weight:700;border:0;border-radius:99px;padding:8px 18px;background:var(--sun);color:#1B2A41;cursor:pointer}
+.ctrl button:disabled{opacity:.4;cursor:default}
+@media (prefers-reduced-motion:reduce){.slide>*,.ball{animation:none}}
+/* embedded original assets */
+.media-figure{max-width:760px;margin:24px auto;text-align:center}
+.media-figure img{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 10px 28px rgba(8,20,40,.12)}
+.media-figure figcaption{margin-top:10px;text-align:left}
+.action-link{display:inline-flex;align-items:center;background:var(--teal);color:var(--on-teal);padding:10px 18px;border-radius:99px;text-decoration:none;font-family:var(--head);font-weight:700}
+.action-link:hover{filter:brightness(.92)}
+/* video */
+.video{aspect-ratio:16/9;background:#081322;border:1px solid var(--line);border-radius:14px;overflow:hidden;max-width:820px;margin:20px auto;box-shadow:0 10px 28px rgba(8,20,40,.14)}
+.video video{display:block;width:100%;height:100%;object-fit:contain}
+details{max-width:820px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 18px}
+summary{font-family:var(--head);font-weight:700;cursor:pointer}
+footer{padding:32px 0;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<p class="tag">Empowerment Technologies | Culminating Activity</p>
+<h1>Hi, I'm Mark Herald V. Cabusas.<br>This is my ICT portfolio.</h1>
+<p>Grade 12 - St. Carlo Acutis | Casa del Niño Jesus de Lucban. Five outputs that show how I use technology to learn, create, and stay safe online.</p>
+</div></header>
+<nav aria-label="Portfolio sections"><ul>
+<li><a href="#o1">1 Essay</a></li><li><a href="#o2">2 Poster</a></li><li><a href="#o3">3 Infographic</a></li><li><a href="#o4">4 Presentation</a></li><li><a href="#o5">5 Video</a></li></ul></nav>
+<main class="wrap">
+
+<section id="o1" class="essay">
+<p class="tag">Output 1</p>
+<h2>The Impact of ICT on My Daily Life and Society</h2>
+<p>Information and Communication Technology (ICT) is part of almost everything I do. I wake up to a phone alarm, check messages from my family and classmates, and use the internet to research my lessons. Even small tasks, like paying bills, listening to music, or finding a route, now happen through apps and online services. ICT saves me time and gives me access to information that would once have required a trip to a library or an office.</p>
+<figure>
+<svg viewBox="0 0 640 170" role="img" aria-label="Illustration of a student with a laptop, phone and the internet connecting them to the world">
+<rect width="640" height="170" rx="14" fill="#0F8B8D"/>
+<rect x="60" y="60" width="130" height="80" rx="8" fill="#fff"/><rect x="45" y="140" width="160" height="10" rx="5" fill="#F2C14E"/>
+<rect x="290" y="50" width="56" height="100" rx="10" fill="#fff"/><circle cx="318" cy="136" r="5" fill="#0F8B8D"/>
+<circle cx="500" cy="85" r="52" fill="#F2C14E"/><ellipse cx="500" cy="85" rx="22" ry="52" fill="none" stroke="#1B2A41" stroke-width="3"/><path d="M448 85h104M458 62h84M458 108h84" stroke="#1B2A41" stroke-width="3"/>
+<path d="M190 100h100M346 100h102" stroke="#fff" stroke-width="4" stroke-dasharray="8 8"/>
+</svg>
+<figcaption>Laptop, phone, and the internet: the tools I use every day.</figcaption></figure>
+<p>Technology has clear advantages. It makes communication fast and cheap, because I can video call a relative abroad in seconds. It gives me free learning resources, such as online lessons and educational videos. It also creates opportunities for work and business, from online selling to remote jobs. However, technology has disadvantages too. Too much screen time can hurt my sleep, my eyes, and my focus. Social media can spread false information, encourage comparison with others, and expose people to cyberbullying, scams, and privacy risks. Technology is a tool, and its effects depend on how it is used.</p>
+<p>In education, ICT has changed how I learn. I can attend online classes, collaborate on shared documents, and make presentations with free tools. Teachers can share modules and quizzes instantly, and students who cannot be in school can still keep up. In communication, ICT lets people share ideas across the world through messaging, email, and social platforms. Communities can organize quickly during emergencies, and ordinary people can have their voices heard.</p>
+<p>With these benefits comes responsibility. As a digital citizen, I must think before I post, respect other people's opinions and privacy, and give credit to the creators of the content I use. I must verify information before sharing it, protect my passwords and personal data, and report bullying or harmful content. By using ICT with honesty, respect, and care, I can help make the digital world a safer and more helpful place for everyone.</p>
+</section>
+
+<section id="o2">
+<p class="tag">Output 2</p>
+<h2>Digital Citizenship Poster: Be a Responsible Internet User</h2>
+<figure class="media-figure"><img src="assets/digital-citizenship-poster.png" alt="Be a Responsible Internet User: five responsible internet DOs and five DON’Ts" loading="lazy"><figcaption>Original digital citizenship poster: five DOs, five DON'Ts, and a reminder to pause, think, and click wisely.</figcaption></figure>
+<p>This poster reminds me and my classmates that the internet is a shared space. Safe and kind habits protect our privacy and make online communities better.</p>
+
+</section>
+
+<section id="o3">
+<p class="tag">Output 3</p>
+<h2>ICT Infographic: The Role of ICT in Education and Society</h2>
+<figure class="media-figure"><img src="assets/ict-infographic.png" alt="The Role of ICT in Education and Society infographic about education, commerce, communication, health, and public services" loading="lazy"><figcaption>ICT connects people to learning, business, communication, healthcare, and essential services.</figcaption></figure>
+<p>This infographic summarizes five important uses of ICT and how they benefit education, business, communication, and society.</p>
+</section>
+
+<section id="o4">
+<p class="tag">Output 4</p>
+<h2>Newton's Laws of Motion in Real Life</h2>
+<div class="deck" id="deck">
+<div class="slide on"><h3>Newton's Laws of Motion</h3><p>Three rules that explain how everything moves, from a rolling ball to a rocket.</p><div class="ball" aria-hidden="true"></div></div>
+<div class="slide"><h3>1st Law: Inertia</h3><p>An object stays at rest or keeps moving at constant speed unless an outside force acts on it.</p><p>Real life: passengers lurch forward when a jeepney brakes suddenly.</p></div>
+<div class="slide"><h3>2nd Law: F = m × a</h3><p>The greater the force, the greater the acceleration. The greater the mass, the smaller the acceleration.</p><p>Real life: it takes more force to push a loaded cart than an empty one.</p></div>
+<div class="slide"><h3>3rd Law: Action and Reaction</h3><p>For every action, there is an equal and opposite reaction.</p><p>Real life: a swimmer pushes water backward and moves forward. A rocket pushes gas down and rises.</p></div>
+<div class="slide"><h3>Summary</h3><ul><li>Inertia: objects resist changes in motion.</li><li>F = ma: force causes acceleration.</li><li>Action-reaction: forces come in pairs.</li></ul></div>
+<div class="ctrl"><button id="prev" type="button">Previous</button><span id="count" aria-live="polite">1 / 5</span><button id="next" type="button">Next</button></div>
+</div>
+<p class="note">View the animated five-slide presentation above using Previous and Next, or download the editable PowerPoint file for classroom presentation.</p>
+<p><a class="action-link" href="newtons-laws-presentation.pptx" download>Download the PowerPoint presentation (.pptx)</a></p>
+</section>
+
+<section id="o5">
+<p class="tag">Output 5</p>
+<h2>How ICT Changes Our Society</h2>
+<div class="video"><video controls preload="metadata" playsinline poster="assets/video-poster.jpg" aria-label="How ICT Changes Our Society, narrated awareness video"><source src="assets/ict-awareness-video.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/ict-awareness-video.mp4">Download the video</a>.</video></div>
+<p class="note">Watch the complete ICT awareness video directly above. Narrated using ElevenLabs; illustrated with AI-assisted educational visuals. <a href="assets/ict-awareness-video.mp4" download>Download MP4</a></p>
+<details><summary>Video topics covered</summary>
+<ol>
+<li>Introduction: everyday uses and meaning of ICT.</li>
+<li>Communication: messages, video calls, collaboration, and emergencies.</li>
+<li>Education: online resources, virtual classrooms, and digital access.</li>
+<li>Employment and business: e-commerce, digital careers, and automation.</li>
+<li>Benefits and risks: healthcare, accessibility, misinformation, scams, and cyberbullying.</li>
+<li>Responsible technology use and conclusion.</li>
+</ol></details>
+</section>
+</main>
+<footer><div class="wrap">Made by Mark Herald V. Cabusas for Empowerment Technologies. Digital portfolio featuring original and assisted educational media.</div></footer>
+<script>
+(function(){
+var s=document.querySelectorAll('#deck .slide'),i=0,p=document.getElementById('prev'),n=document.getElementById('next'),c=document.getElementById('count');
+function show(k){i=k;for(var j=0;j<s.length;j++){s[j].classList.toggle('on',j===i)}c.textContent=(i+1)+' / '+s.length;p.disabled=i===0;n.disabled=i===s.length-1}
+p.onclick=function(){if(i>0)show(i-1)};n.onclick=function(){if(i<s.length-1)show(i+1)};show(0);
+})();
+</script>
+</body>
+</html>
