@@ -898,54 +898,6 @@ footer {
 @keyframes demoSwimmer{0%,12%{transform:translateX(-35px)}73%{transform:translateX(40px)}100%{transform:translateX(-35px)}}
 @media(max-width:600px){.motion-demo{padding:7px;margin:10px 0}.motion-caption{font-size:.65rem}.motion-demo svg{max-height:150px}.motion-label{font-size:.73rem!important}}
 @media(prefers-reduced-motion:reduce){.motion-demo svg *{animation:none!important}}
-
-/* Illustrated scenes: one compact AI-generated storyboard asset, native CSS motion */
-.cinematic-scene{width:100%;border-radius:16px;overflow:hidden;margin:16px 0 20px;background:#10283b;border:1px solid rgba(255,255,255,.15);box-shadow:0 12px 34px rgba(0,0,0,.22)}
-.scene-window{height:clamp(190px,37vw,360px);overflow:hidden;position:relative;isolation:isolate;background:#204660}
-.scene-window::after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(4,15,27,.73));pointer-events:none}
-.scene-window img{position:absolute;width:200%;height:200%;max-width:none;object-fit:fill;filter:saturate(1.16) contrast(1.05);will-change:transform}
-.scene-jeep .scene-window img{left:0;top:0}
-.scene-carts .scene-window img{left:-100%;top:0}
-.scene-swim .scene-window img{left:0;top:-100%}
-.slide.on .scene-jeep img{animation:cinematicBrake 3.8s ease-in-out infinite}
-.slide.on .scene-carts img{animation:cinematicCarts 4s ease-in-out infinite}
-.slide.on .scene-swim img{animation:cinematicSwim 4s ease-in-out infinite}
-@keyframes cinematicBrake{0%,25%{transform:translateX(-8px) scale(1.025)}45%,65%{transform:translateX(4px) scale(1)}100%{transform:translateX(-8px) scale(1.025)}}
-@keyframes cinematicCarts{0%,15%{transform:translateX(-2px) scale(1)}70%{transform:translateX(5px) scale(1.06)}100%{transform:translateX(-2px) scale(1)}}
-@keyframes cinematicSwim{0%,15%{transform:translateX(3px) scale(1.03)}70%{transform:translateX(-8px) scale(1.08)}100%{transform:translateX(3px) scale(1.03)}}
-.scene-flash,.scene-motion-arrow,.scene-force-label,.scene-direction{font:800 clamp(.73rem,2.1vw,1.14rem) 'Bricolage Grotesque',Arial,sans-serif;position:absolute;z-index:2;border-radius:10px;padding:7px 11px;box-shadow:0 3px 18px #0008}
-.scene-flash{top:18px;right:18px;background:#d9455b;color:#fff;transform:rotate(-5deg)}
-.slide.on .scene-flash{animation:sceneAlert 3.8s infinite}
-@keyframes sceneAlert{0%,26%,58%,100%{opacity:0;transform:scale(.8) rotate(-5deg)}32%,50%{opacity:1;transform:scale(1.05) rotate(-5deg)}}
-.scene-motion-arrow{left:18px;bottom:20px;background:#f2c14e;color:#111a29}
-.slide.on .scene-motion-arrow{animation:sceneArrow 3.8s ease-in-out infinite}
-@keyframes sceneArrow{0%,20%,85%,100%{transform:translateX(0);opacity:.4}46%,65%{transform:translateX(36px);opacity:1}}
-.scene-force-label{top:16px;left:50%;transform:translateX(-50%);background:#f2c14e;color:#162237;white-space:nowrap}
-.scene-speedbar{position:absolute;z-index:2;bottom:17px;width:42%;display:flex;flex-direction:column;gap:4px;font:700 clamp(.63rem,1.8vw,.95rem) Arial,sans-serif;color:#fff;text-shadow:0 1px 3px #000}
-.speed-empty{left:5%}.speed-loaded{right:5%}
-.scene-speedbar i{display:block;height:8px;border-radius:9px;background:#3ce0c6;transform-origin:left;transform:scaleX(.1)}
-.speed-loaded i{background:#f2c14e}
-.slide.on .speed-empty i{animation:sceneBarFast 4s ease-in-out infinite}
-.slide.on .speed-loaded i{animation:sceneBarSlow 4s ease-in-out infinite}
-@keyframes sceneBarFast{0%,10%{transform:scaleX(.08)}75%{transform:scaleX(1)}100%{transform:scaleX(.08)}}
-@keyframes sceneBarSlow{0%,10%{transform:scaleX(.08)}75%{transform:scaleX(.25)}100%{transform:scaleX(.08)}}
-.scene-direction{background:rgba(7,28,50,.86);color:#fff}
-.scene-forward{right:15px;top:14px;border:1px solid #74dfb1}
-.scene-back{left:15px;bottom:14px;border:1px solid #ff8298}
-.slide.on .scene-forward{animation:sceneForward 4s ease-in-out infinite}
-.slide.on .scene-back{animation:sceneBackward 4s ease-in-out infinite}
-@keyframes sceneForward{0%,100%{transform:translateX(-8px)}50%{transform:translateX(12px)}}
-@keyframes sceneBackward{0%,100%{transform:translateX(8px)}50%{transform:translateX(-12px)}}
-.scene-ripples{position:absolute;z-index:2;left:26%;bottom:17%;width:30%;height:26%;border:3px solid #adf7ffb8;border-radius:50%;opacity:0}
-.slide.on .scene-ripples{animation:sceneRipple 4s ease-out infinite}
-@keyframes sceneRipple{0%,10%{transform:scale(.4);opacity:0}35%{opacity:.8}80%,100%{transform:scale(2);opacity:0}}
-.scene-explain{display:flex;gap:10px;align-items:center;padding:11px 14px;font:500 .9rem 'Bricolage Grotesque',Arial,sans-serif;line-height:1.35;color:#c9d9e7}
-.scene-explain strong{white-space:nowrap;color:#f2c14e}
-.scene-explain span{flex:1}
-.scene-toggle{background:transparent;border:1px solid #75889e;color:#fff;padding:6px 12px;border-radius:99px;font:700 .82rem Arial,sans-serif;cursor:pointer}
-.cinematic-scene.paused *{animation-play-state:paused!important}
-@media(max-width:600px){.scene-window{height:220px}.scene-explain{display:block}.scene-explain strong{display:block;margin-bottom:4px}.scene-toggle{margin-top:8px}.scene-flash,.scene-motion-arrow,.scene-force-label,.scene-direction{padding:5px 7px;font-size:.7rem}}
-@media(prefers-reduced-motion:reduce){.cinematic-scene *{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1173,10 +1125,7 @@ footer {
         <div class="slide">
           <span class="slide-badge">Slide 2 of 5</span>
           <h3>1st Law: Law of Inertia</h3>
-<div class="cinematic-scene scene-jeep" role="group" aria-label="AI-illustrated jeepney demonstrating inertia">
-  <div class="scene-window"><img src="assets/newton-ai-scenes.svg" alt="Illustrated Filipino jeepney with students riding on a sunny street" loading="lazy"><span class="scene-flash">BRAKING!</span><span class="scene-motion-arrow">FORWARD →</span></div>
-  <div class="scene-explain"><strong>Watch the motion</strong><span>As the jeepney brakes, the passengers tend to keep moving forward.</span><button type="button" class="scene-toggle" aria-label="Pause illustration animation">Pause</button></div>
-</div>
+<div class="motion-demo" role="img" aria-label="Animated jeepney braking while passenger continues forward because of inertia"><div class="motion-caption"><span>JEepney stops</span><span>Passenger moves forward →</span></div><svg viewBox="0 0 580 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 130h556" stroke="#59748d" stroke-width="3" stroke-dasharray="9 8"/><g class="braking-jeep"><rect x="75" y="55" width="350" height="68" rx="12" fill="#32bac3"/><rect x="98" y="65" width="190" height="34" rx="6" fill="#12324a"/><rect x="305" y="65" width="95" height="34" rx="6" fill="#12324a"/><rect x="80" y="104" width="343" height="10" fill="#f2c14e"/><circle cx="140" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/><circle cx="357" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/></g><g class="inertia-person"><circle cx="223" cy="77" r="13" fill="#ffcb9c"/><path d="M208 92h30l15 14h-59z" fill="#ff7992"/></g><path d="M459 69h67m-20-16 20 16-20 16" stroke="#f2c14e" stroke-width="5" fill="none" stroke-linecap="round"/><text x="462" y="42" font-size="16" fill="#f2c14e">inertia</text></svg><p class="motion-label">Brakes act on the vehicle; the passenger keeps moving until another force acts.</p></div>
           <p>An object at rest stays at rest, and an object in motion continues with constant velocity, unless acted upon by an unbalanced external force.</p>
           <div class="real-life-callout">
             <strong>🇵🇭 Everyday Scenario:</strong> When a commuter jeepney suddenly slams its brakes, passengers instinctively jerk forward because their inertia resists the abrupt deceleration.
@@ -1187,10 +1136,7 @@ footer {
         <div class="slide">
           <span class="slide-badge">Slide 3 of 5</span>
           <h3>2nd Law: F = m &times; a</h3>
-<div class="cinematic-scene scene-carts" role="group" aria-label="AI-illustrated shopping carts showing Newton's second law">
-  <div class="scene-window"><img src="assets/newton-ai-scenes.svg" alt="Two realistic shopping carts, one empty and one fully loaded with groceries" loading="lazy"><span class="scene-force-label">SAME PUSH · 20 N</span><div class="scene-speedbar speed-empty"><i></i><span>5 kg: 4 m/s²</span></div><div class="scene-speedbar speed-loaded"><i></i><span>20 kg: 1 m/s²</span></div></div>
-  <div class="scene-explain"><strong>Compare acceleration</strong><span>The lighter cart speeds up four times faster under the same net force.</span><button type="button" class="scene-toggle" aria-label="Pause illustration animation">Pause</button></div>
-</div>
+<div class="motion-demo" role="img" aria-label="Light and heavy carts accelerated by equal force; the lighter cart moves farther"><div class="motion-caption"><span>Same push: 20 N</span><span>Acceleration = Force ÷ Mass</span></div><svg viewBox="0 0 580 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 88h556M12 181h556" stroke="#59748d" stroke-width="2" stroke-dasharray="8 8"/><g class="cart-light"><path d="M43 43h100l-17 35H60z" fill="#3cc4c6"/><circle cx="72" cy="81" r="8" fill="#eaf0fa"/><circle cx="120" cy="81" r="8" fill="#eaf0fa"/><path d="M18 61h28" stroke="#f2c14e" stroke-width="5"/><text x="164" y="68" font-size="18" fill="#eaf0fa">5 kg → 4 m/s²</text></g><g class="cart-heavy"><path d="M43 137h100l-17 35H60z" fill="#ff7a8c"/><rect x="65" y="113" width="56" height="24" rx="3" fill="#f2c14e"/><circle cx="72" cy="174" r="8" fill="#eaf0fa"/><circle cx="120" cy="174" r="8" fill="#eaf0fa"/><path d="M18 153h28" stroke="#f2c14e" stroke-width="5"/><text x="164" y="162" font-size="18" fill="#eaf0fa">20 kg → 1 m/s²</text></g></svg><p class="motion-label">Under the same net force, the lighter cart accelerates four times as fast.</p></div>
           <p>Acceleration is directly proportional to net force and inversely proportional to object mass. More force yields faster speed changes; more mass resists acceleration.</p>
           <div class="real-life-callout">
             <strong>🛒 Everyday Scenario:</strong> Pushing an empty grocery cart requires minimal muscle effort, whereas accelerating a fully laden cart demands substantially greater push.
@@ -1201,10 +1147,7 @@ footer {
         <div class="slide">
           <span class="slide-badge">Slide 4 of 5</span>
           <h3>3rd Law: Action &amp; Reaction</h3>
-<div class="cinematic-scene scene-swim" role="group" aria-label="AI-illustrated swimmer demonstrating action and reaction">
-  <div class="scene-window"><img src="assets/newton-ai-scenes.svg" alt="Realistic swimmer doing freestyle in a turquoise swimming pool" loading="lazy"><span class="scene-direction scene-forward">WATER PUSHES →</span><span class="scene-direction scene-back">← SWIMMER PUSHES WATER</span><div class="scene-ripples" aria-hidden="true"></div></div>
-  <div class="scene-explain"><strong>Equal and opposite</strong><span>The swimmer pushes water back; the water pushes the swimmer forward.</span><button type="button" class="scene-toggle" aria-label="Pause illustration animation">Pause</button></div>
-</div>
+<div class="motion-demo" role="img" aria-label="Swimmer pushes water backward while water pushes swimmer forward with an equal and opposite force"><div class="motion-caption"><span>Equal force</span><span>Opposite directions</span></div><svg viewBox="0 0 580 175" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 125q25-16 50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0t50 0" stroke="#3cc4c6" fill="none" stroke-width="5"/><g class="swimmer-motion"><ellipse cx="255" cy="88" rx="77" ry="24" fill="#f2c14e" transform="rotate(-8 255 88)"/><circle cx="348" cy="79" r="23" fill="#ffcb9c"/><path d="M236 103l-52 29m103-40-52-41" stroke="#ffcb9c" stroke-width="15" stroke-linecap="round"/></g><path d="M319 39h165m-16-13 18 13-18 13" stroke="#78e3a5" stroke-width="6" fill="none" stroke-linecap="round"/><text x="316" y="20" fill="#78e3a5" font-size="14">Water pushes swimmer →</text><path d="M266 155H99m18-13-18 13 18 13" stroke="#ff7a8c" stroke-width="6" fill="none" stroke-linecap="round"/><text x="277" y="161" fill="#ff9bab" font-size="14">← Swimmer pushes water</text></svg><p class="motion-label">The forces act on different objects: swimmer on water, and water on swimmer.</p></div>
           <p>For every exerted action force, there is an equal in magnitude and opposite in direction reaction force. Forces always occur in matched pairs.</p>
           <div class="real-life-callout">
             <strong>🏊 Everyday Scenario:</strong> A swimmer drives water backward with arms and kicks, and the water reacts by propelling the swimmer's body forward.
@@ -1636,6 +1579,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-<script>document.addEventListener('click',function(e){const b=e.target.closest('.scene-toggle');if(!b)return;const s=b.closest('.cinematic-scene');const paused=s.classList.toggle('paused');b.textContent=paused?'Play':'Pause';b.setAttribute('aria-label',paused?'Play illustration animation':'Pause illustration animation');});</script>
 </body>
 </html>
