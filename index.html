@@ -898,6 +898,7 @@ footer {
 @keyframes demoSwimmer{0%,12%{transform:translateX(-35px)}73%{transform:translateX(40px)}100%{transform:translateX(-35px)}}
 @media(max-width:600px){.motion-demo{padding:7px;margin:10px 0}.motion-caption{font-size:.65rem}.motion-demo svg{max-height:150px}.motion-label{font-size:.73rem!important}}
 @media(prefers-reduced-motion:reduce){.motion-demo svg *{animation:none!important}}
+.video-topic-note{font-size:.92rem;color:var(--muted);margin:-5px 0 14px}.video-topics .chapter-btn{cursor:default}.video-topics .chapter-btn:hover{transform:none;background:var(--surface-alt);border-color:var(--line)}
 </style>
 </head>
 <body>
@@ -1125,7 +1126,7 @@ footer {
         <div class="slide">
           <span class="slide-badge">Slide 2 of 5</span>
           <h3>1st Law: Law of Inertia</h3>
-<div class="motion-demo" role="img" aria-label="Animated jeepney braking while passenger continues forward because of inertia"><div class="motion-caption"><span>JEepney stops</span><span>Passenger moves forward →</span></div><svg viewBox="0 0 580 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 130h556" stroke="#59748d" stroke-width="3" stroke-dasharray="9 8"/><g class="braking-jeep"><rect x="75" y="55" width="350" height="68" rx="12" fill="#32bac3"/><rect x="98" y="65" width="190" height="34" rx="6" fill="#12324a"/><rect x="305" y="65" width="95" height="34" rx="6" fill="#12324a"/><rect x="80" y="104" width="343" height="10" fill="#f2c14e"/><circle cx="140" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/><circle cx="357" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/></g><g class="inertia-person"><circle cx="223" cy="77" r="13" fill="#ffcb9c"/><path d="M208 92h30l15 14h-59z" fill="#ff7992"/></g><path d="M459 69h67m-20-16 20 16-20 16" stroke="#f2c14e" stroke-width="5" fill="none" stroke-linecap="round"/><text x="462" y="42" font-size="16" fill="#f2c14e">inertia</text></svg><p class="motion-label">Brakes act on the vehicle; the passenger keeps moving until another force acts.</p></div>
+<div class="motion-demo" role="img" aria-label="Animated jeepney braking while passenger continues forward because of inertia"><div class="motion-caption"><span>Jeepney stops</span><span>Passenger moves forward →</span></div><svg viewBox="0 0 580 148" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 130h556" stroke="#59748d" stroke-width="3" stroke-dasharray="9 8"/><g class="braking-jeep"><rect x="75" y="55" width="350" height="68" rx="12" fill="#32bac3"/><rect x="98" y="65" width="190" height="34" rx="6" fill="#12324a"/><rect x="305" y="65" width="95" height="34" rx="6" fill="#12324a"/><rect x="80" y="104" width="343" height="10" fill="#f2c14e"/><circle cx="140" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/><circle cx="357" cy="122" r="19" fill="#17233a" stroke="#d8e9f3" stroke-width="5"/></g><g class="inertia-person"><circle cx="223" cy="77" r="13" fill="#ffcb9c"/><path d="M208 92h30l15 14h-59z" fill="#ff7992"/></g><path d="M459 69h67m-20-16 20 16-20 16" stroke="#f2c14e" stroke-width="5" fill="none" stroke-linecap="round"/><text x="462" y="42" font-size="16" fill="#f2c14e">inertia</text></svg><p class="motion-label">Brakes act on the vehicle; the passenger keeps moving until another force acts.</p></div>
           <p>An object at rest stays at rest, and an object in motion continues with constant velocity, unless acted upon by an unbalanced external force.</p>
           <div class="real-life-callout">
             <strong>🇵🇭 Everyday Scenario:</strong> When a commuter jeepney suddenly slams its brakes, passengers instinctively jerk forward because their inertia resists the abrupt deceleration.
@@ -1179,9 +1180,9 @@ footer {
 
     <!-- Interactive Physics Mini-Lab -->
     <div class="physics-lab">
-      <h3>🔬 Interactive Mini-Lab: Newton's 2nd Law ($F = ma$)</h3>
+      <h3>🔬 Interactive Mini-Lab: Newton's 2nd Law (F = ma)</h3>
       <p style="color:var(--muted); font-size:0.95rem; margin-bottom:16px;">
-        Adjust the sliders below to see how varying <strong>Force (F)</strong> and <strong>Mass (m)</strong> determines the cart's acceleration ($a = F/m$).
+        Adjust the sliders below to see how varying <strong>Force (F)</strong> and <strong>Mass (m)</strong> determines the cart's acceleration (a = F/m).
       </p>
 
       <div class="physics-controls">
@@ -1207,8 +1208,9 @@ footer {
     </div>
 
     <p style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
-      <a class="btn btn-primary" href="newtons-laws-presentation.pptx" download>📥 Download Original PowerPoint (.pptx)</a>
-      <span style="color:var(--muted); font-size:0.9rem;">Editable classroom presentation with complete visual diagrams.</span>
+      <a class="btn btn-primary" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fmark-herald-ict-portfolio.pages.dev%2Fnewtons-laws-presentation.pptx" target="_blank" rel="noopener noreferrer">▶ View PowerPoint Online</a>
+      <a class="btn btn-secondary" href="newtons-laws-presentation.pptx" download>📥 Download PowerPoint (.pptx)</a>
+      <span style="color:var(--muted); font-size:0.9rem;">Five-slide editable classroom presentation. Open it in Microsoft’s online viewer or download the file.</span>
     </p>
   </section>
 
@@ -1233,32 +1235,14 @@ footer {
           <span class="badge">⏱️ Duration: 3m 37s</span>
         </div>
 
-        <h4 class="chapters-title">📑 Click a Topic to Jump &amp; Play:</h4>
-        <div class="chapter-list">
-          <button class="chapter-btn" data-time="0" type="button">
-            <span class="chapter-time">0:00</span>
-            <span>1. Introduction &amp; Everyday ICT</span>
-          </button>
-          <button class="chapter-btn" data-time="32" type="button">
-            <span class="chapter-time">0:32</span>
-            <span>2. Global Communication &amp; Connectivity</span>
-          </button>
-          <button class="chapter-btn" data-time="68" type="button">
-            <span class="chapter-time">1:08</span>
-            <span>3. Empowered Education &amp; Classrooms</span>
-          </button>
-          <button class="chapter-btn" data-time="104" type="button">
-            <span class="chapter-time">1:44</span>
-            <span>4. Employment, Business &amp; Automation</span>
-          </button>
-          <button class="chapter-btn" data-time="140" type="button">
-            <span class="chapter-time">2:20</span>
-            <span>5. Health, Accessibility &amp; Online Risks</span>
-          </button>
-          <button class="chapter-btn" data-time="178" type="button">
-            <span class="chapter-time">2:58</span>
-            <span>6. Responsible Use &amp; Final Synthesis</span>
-          </button>
+        <h4 class="chapters-title">📑 Topics Covered in the Video</h4>
+        <p class="video-topic-note">These topics follow the narration. Timestamps are omitted because individual chapter boundaries have not been verified.</p>
+        <div class="chapter-list video-topics">
+          <div class="chapter-btn"><span class="chapter-time" aria-hidden="true">01</span><span>ICT in Daily Life &amp; Communication</span></div>
+          <div class="chapter-btn"><span class="chapter-time" aria-hidden="true">02</span><span>Education &amp; Employment</span></div>
+          <div class="chapter-btn"><span class="chapter-time" aria-hidden="true">03</span><span>Positive Effects of ICT</span></div>
+          <div class="chapter-btn"><span class="chapter-time" aria-hidden="true">04</span><span>Negative Effects &amp; Online Risks</span></div>
+          <div class="chapter-btn"><span class="chapter-time" aria-hidden="true">05</span><span>Responsible Technology Use &amp; Conclusion</span></div>
         </div>
 
         <div style="margin-top:20px;">
@@ -1506,38 +1490,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, duration * 1000 + 400);
   });
 
-  /* ==========================================================================
-     7. Video Chapter Seek & Timestamp Highlighting
-     ========================================================================== */
-  const video = document.getElementById('ict-video');
-  const chapterBtns = document.querySelectorAll('.chapter-btn');
-
-  chapterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      const time = parseFloat(btn.getAttribute('data-time'));
-      if (!isNaN(time) && video) {
-        video.currentTime = time;
-        video.play().catch(function() {});
-        chapterBtns.forEach(function(b) { b.classList.remove('playing'); });
-        btn.classList.add('playing');
-        video.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
-  });
-
-  if (video) {
-    video.addEventListener('timeupdate', function() {
-      const curr = video.currentTime;
-      let activeIndex = 0;
-      chapterBtns.forEach(function(btn, idx) {
-        const t = parseFloat(btn.getAttribute('data-time'));
-        if (curr >= t) activeIndex = idx;
-      });
-      chapterBtns.forEach(function(btn, idx) {
-        btn.classList.toggle('playing', idx === activeIndex);
-      });
-    });
-  }
+  /* Video topic list is intentionally informational: no unverified seek times. */
 
   /* ==========================================================================
      8. High-Res Image Lightbox Modal
